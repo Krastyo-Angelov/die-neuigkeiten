@@ -11,6 +11,5 @@ export class CountryApiService {
 
   getCountry(name){
     return this.http.get("https://restcountries.com/v3.1/name/"+name);
-    // return this.http.get("https://restcountries.com/v3.1/all");
   }
 }

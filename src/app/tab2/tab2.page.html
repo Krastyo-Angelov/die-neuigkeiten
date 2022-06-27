@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Länder
+      Staaten
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,16 +12,29 @@
   </ion-item>
   <ion-button expand="block" (click)="searchCountry()">Anzeigen</ion-button>
 
-  <ion-card-header *ngFor="let country of countryData">
+  <ion-card-header>
     <h3>
-      {{countryData}}
+      {{countryNameShow}}
     </h3>
   </ion-card-header>
   <ion-card-content>
-    <p>
-      <!-- Population: {{country.population}} 
-      Location: {{country.latlng}} -->
-    </p>
+    <ion-list>
+      <ion-item>
+        <ion-label>{{countryCapitalCity}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{countryPopulation}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{countryArea}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{countryCont}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{countryGeoLoc}}</ion-label>
+      </ion-item>
+    </ion-list>
   </ion-card-content>
 
 </ion-content>
