@@ -1,17 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Länder
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-item>
+    <ion-input [(ngModel)]="countryName" placeholder="Geben Sie Name des Landes ein"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="searchCountry()">Anzeigen</ion-button>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card-header *ngFor="let country of countryData">
+    <h3>
+      {{countryData}}
+    </h3>
+  </ion-card-header>
+  <ion-card-content>
+    <p>
+      <!-- Population: {{country.population}} 
+      Location: {{country.latlng}} -->
+    </p>
+  </ion-card-content>
+
 </ion-content>

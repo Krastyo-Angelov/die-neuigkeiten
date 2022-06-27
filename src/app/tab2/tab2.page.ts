@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CountryApiService } from '../services/country-api.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  public countryName:any;
+  public countryData:any;
+  constructor(public api2:CountryApiService) {}
 
-  constructor() {}
+  // ngOnInit(){
+  //   this.api2.getCountry().subscribe((results) => {
+  //     console.log(results);
+  //     this.countryData = results;
+  //   });
+  // }
 
+  searchCountry(){
+    this.api2.getCountry(this.countryName).subscribe(result =>{
+      console.log(result);
+      this.countryData=result;
+    });
+  }
 }

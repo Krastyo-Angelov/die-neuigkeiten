@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NewsApiService } from '../services/news-api.service';
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  public theme:any;
+  public newsData:any;
+  constructor(public api1:NewsApiService) {}
 
-  constructor() {}
-
+  search(){
+    this.api1.getNew(this.theme).subscribe(result => {
+      console.log(result);
+      this.newsData=result['articles'];
+    });
+  }
 }

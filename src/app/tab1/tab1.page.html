@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Nachrichten
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-item>
+    <ion-input [(ngModel)]="theme" placeholder="Geben Sie ein Thema aus"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="search()">Suchen</ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card *ngFor="let news of newsData">
+    <ion-card-header>
+      <img class="newsImage" [src]="news.urlToImage" />
+      <h3>
+        {{news.title}}
+      </h3>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{news.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
