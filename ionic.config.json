@@ -1,0 +1,8 @@
+{
+  "name": "die-neuigkeiten",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "07824ddb"
+}
