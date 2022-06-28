@@ -10,6 +10,6 @@ export class NewsApiService {
   constructor(public http:HttpClient) { }
 
   getNew(article){
-    return this.http.get("https://newsapi.org/v2/everything?q="+article+"&from=2022-05-27&sortBy=publishedAt&apiKey="+this.apiKey);
+    return this.http.get("https://newsapi.org/v2/everything?q="+article+"&from=2022-05-28&sortBy=publishedAt&apiKey="+this.apiKey);
   }
 }

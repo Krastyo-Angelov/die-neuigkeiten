@@ -1,40 +1,38 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Staaten
+    <ion-title class="colorTitle">
+      Staatsinformationen
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-item>
-    <ion-input [(ngModel)]="countryName" placeholder="Geben Sie Name des Landes ein"></ion-input>
+    <ion-input [(ngModel)]="countryName" placeholder="Geben Sie Name eines Landes ein"></ion-input>
   </ion-item>
   <ion-button expand="block" (click)="searchCountry()">Anzeigen</ion-button>
 
   <ion-card-header>
-    <h3>
+    <h3 class="colorTitle">
       {{countryNameShow}}
     </h3>
   </ion-card-header>
   <ion-card-content>
-    <ion-list>
-      <ion-item>
-        <ion-label>{{countryCapitalCity}}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>{{countryPopulation}}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>{{countryArea}}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>{{countryCont}}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>{{countryGeoLoc}}</ion-label>
-      </ion-item>
-    </ion-list>
+    <p class="formatierung">
+      {{countryCapitalCity}}
+    </p>
+    <p class="formatierung">
+      {{countryPopulation}}
+    </p>
+    <p class="formatierung">
+      {{countryArea}}
+    </p>
+    <p class="formatierung">
+      {{countryCont}}
+    </p>
+    <p class="formatierung">
+      {{countryGeoLoc}}
+    </p>
   </ion-card-content>
 
 </ion-content>
